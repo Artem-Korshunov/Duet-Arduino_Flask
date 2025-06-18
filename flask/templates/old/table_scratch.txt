@@ -1,0 +1,67 @@
+<table border="1" width="50%">
+	<tr>
+		<td width="250" colspan="5" align="center"><button onclick="sendPhrase('75&M112')">EMERGENCY STOP</button></td></td>
+		<td width="50" align="center"><b>75</b></td>
+		<td width="250" colspan="7" align="center"><button onclick="sendPhrase('75&G28')">Home ALL</button></td>
+	</tr>
+	<tr>
+		<td width="250" align="center" colspan="5" rowspan="5">&nbsp;</td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y10')">Y10</button></td>
+		<td width="250" align="center" colspan="5" rowspan="5">&nbsp;</td>
+		<td width="50" align="center" rowspan="11">&nbsp;</td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z10')">
+		Z10</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y1')">Y1</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z1')">Z1</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y0.1')">Y0.1</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z0.1')">Z0.1</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y0.01')">Y0.01</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z0.01')">Z0.01</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y0.002')">Y0.002</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z0.002')">Z0.002</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X10')">X10</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X1')">X1</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X0.1')">X0.1</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X0.01')">X0.01</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X0.002')">X0.002</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G28 XY')">Home XY</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X-0.002')">X-0.002</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X-0.01')">X-0.01</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X-0.1')">X-0.1</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X-1')">X-1</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1X-10')">X-10</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G28 Z')">Home Z</button></td>
+	</tr>
+	<tr>
+		<td width="250" align="center" colspan="5" rowspan="5">&nbsp;</td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y-0.002')">Y-0.002</button></td>
+		<td width="250" align="center" colspan="5" rowspan="5">&nbsp;</td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z-0.002')">Z-0.002</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y-0.01')">Y-0.01</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z-0.01')">Z-0.01</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y-0.1')">Y-0.1</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z-0.1')">Z-0.1</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y-1')">Y-1</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z-1')">Z-1</button></td>
+	</tr>
+	<tr>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Y-10')">Y-10</button></td>
+		<td width="50" align="center"><button onclick="sendPhrase('75&G1Z-10')">Z-10</button></td>
+	</tr>
+	</table>

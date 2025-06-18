@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправка фразы и ввод команд на сервер</title>
+</head>
+<body>
+
+	<h2><font face="Times New Roman">Управление Платами:</font></h2>
+	 
+    <button onclick="sendPhrase('73')">110</button>	
+    <button onclick="sendPhrase('210')">210</button>
+    <button onclick="sendPhrase('310')">310</button>
+	
+	
+    <h2>Управление Движением:</h2>
+
+    <button onclick="sendPhrase('G1X10')"><!--<svg width="30" height="30">-->Х+10</button>
+    <button onclick="sendPhrase('G1X-10')">Х-10</button>
+    <button onclick="sendPhrase('G1Y10')">У+10</button>
+    <button onclick="sendPhrase('G1Y-10')">У-10</button>	
+    <button onclick="sendPhrase('G1Z10')">Z+10</button>
+    <button onclick="sendPhrase('G1Z-10')">Z-10</button>	
+	
+	 <h2>Управление Лазером:</h2>
+	 
+    <button onclick="sendPhrase('s1')">Включить лазер</button>	
+    <button onclick="sendPhrase('s0')">Отключить лазер</button>
+    <button onclick="sendPhrase('p1')">Мощность 46%</button>
+	<button onclick="sendPhrase('p0')">Мощность 0%</button>	
+    <button onclick="sendPhrase('k1')">Одиночный выстрел</button>
+    <button onclick="sendPhrase('l1')">Включить пилотный пучок</button>
+	<button onclick="sendPhrase('l0')">Отключить пилотный пучок</button>
+	
+    <div id="response"></div>
+
+    <hr>
+
+    <h1>Ввод Команд:</h1>
+    <textarea id="commandInput" rows="1" cols="50"></textarea><br>
+    <button onclick="sendCommand()">Отправить команду</button>
+
+    <div id="commandResponse"></div>
+
+    <script>
+        function sendPhrase(phrase) {
+            // Оставьте эту часть кода, чтобы отправить фразу на сервер
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/feedback', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            var data = 'feedback=' + encodeURIComponent(phrase);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('response').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(data);
+        }
+
+        function sendCommand() {
+            // Получаем текст из textarea
+            var command = document.getElementById('commandInput').value;
+
+            // Отправляем команду на сервер
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/command', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            var data = 'command=' + encodeURIComponent(command);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('commandResponse').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(data);
+
+            // Очищаем текстовое поле после отправки команды
+            document.getElementById('commandInput').value = '';
+        }
+    </script>
+</body>
+</html>

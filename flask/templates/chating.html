@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправка фразы на сервер</title>
+</head>
+<body>
+    <h1>Отправка фразы на сервер</h1>
+
+    <button onclick="sendPhrase('Фраза 1')">Отправить Фразу 1</button>
+    <button onclick="sendPhrase('Фраза 2')">Отправить Фразу 2</button>
+    <button onclick="sendPhrase('Фраза 3')">Отправить Фразу 3</button>
+
+    <div id="response"></div>
+
+    <script>
+        function sendPhrase(phrase) {
+            // Создаем объект XMLHttpRequest для отправки запроса на сервер
+            var xhr = new XMLHttpRequest();
+
+            // Настраиваем POST-запрос на сервер
+            xhr.open('POST', '/feedback', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // Создаем данные, которые будем отправлять на сервер
+            var data = 'feedback=' + encodeURIComponent(phrase);
+
+            // Устанавливаем обработчик события при завершении запроса
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Обновляем элемент на странице с ответом от сервера
+                    document.getElementById('response').innerHTML = xhr.responseText;
+                }
+            };
+
+            // Отправляем запрос на сервер
+            xhr.send(data);
+        }
+    </script>
+</body>
+</html>

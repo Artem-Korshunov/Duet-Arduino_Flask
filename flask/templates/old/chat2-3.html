@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправка фразы и ввод команд на сервер</title>
+</head>
+<body>
+
+	<h2>Управление Платами:</h2>
+	 
+    <button onclick="sendPhrase('110')">110</button>	
+    <button onclick="sendPhrase('210')">210</button>
+    <button onclick="sendPhrase('310')">310</button>
+	
+	
+    <h2>Управление Движением:</h2>
+    <table border="1" width="100%">
+		<tr>
+			<td width="250" colspan="5" align="center">&nbsp;</td>
+			<td width="75" align="center">001</td>
+			<td width="250" align="center" colspan="5">&nbsp;</td>
+			<td align="center" width="100">&nbsp;</td>
+			<td align="center" width="250" colspan="5">&nbsp;</td>
+			<td align="center" width="75">002</td>
+			<td align="center" width="250" colspan="5">&nbsp;</td>
+			<td align="center" width="100">&nbsp;</td>
+			<td align="center" width="250" colspan="5">&nbsp;</td>
+			<td align="center" width="75">003</td>
+			<td align="center" width="123" colspan="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X-10')">�-10</button></td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X-5')">�-5</button></td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X-1')">�-1</button></td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X-0.5')">�-0.5</button></td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X-0.1')">�-0.1</button></td>
+			<td width="75" align="center">&nbsp;</td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X+0.1')">�+0.1</td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X+0.5')">�+0.5</td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X+1')">�+1</button></td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X+5')">�+5</button></td>
+			<td width="50" align="center"><button onclick="sendPhrase('G1X+10')">�+10</button></td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50"></td>
+			<td align="center" width="75">&nbsp;</td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50"></td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="75">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="65">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="75" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="75">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="75">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="65">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="75" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td width="50" align="center">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="75">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="75">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="50">&nbsp;</td>
+			<td align="center" width="65">&nbsp;</td>
+		</tr>
+		</table>
+	
+	 <h2>Управление Лазером:</h2>
+	 
+    <button onclick="sendPhrase('s1')">Включить лазер</button>	
+    <button onclick="sendPhrase('s0')">Отключить лазер</button>
+    <button onclick="sendPhrase('p1')">Мощность 46%</button>
+	<button onclick="sendPhrase('p0')">Мощность 0%</button>	
+    <button onclick="sendPhrase('k1')">Одиночный выстрел</button>
+    <button onclick="sendPhrase('l1')">Включить пилотный пучок</button>
+	<button onclick="sendPhrase('l0')">Отключить пилотный пучок</button>
+	
+    <div id="response"></div>
+
+    <hr>
+
+    <h1>Ввод Команд:</h1>
+    <textarea id="commandInput" rows="1" cols="50"></textarea><br>
+    <button onclick="sendCommand()">Отправить команду</button>
+
+    <div id="commandResponse"></div>
+
+    <script>
+        function sendPhrase(phrase) {
+            // Оставьте эту часть кода, чтобы отправить фразу на сервер
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/feedback', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            var data = 'feedback=' + encodeURIComponent(phrase);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('response').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(data);
+        }
+
+        function sendCommand() {
+            // Получаем текст из textarea
+            var command = document.getElementById('commandInput').value;
+
+            // Отправляем команду на сервер
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/command', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            var data = 'command=' + encodeURIComponent(command);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('commandResponse').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(data);
+
+            // Очищаем текстовое поле после отправки команды
+            document.getElementById('commandInput').value = '';
+        }
+    </script>
+</body>
+</html>
