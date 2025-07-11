@@ -8,7 +8,7 @@ import requests as r
 
 # DELETE "#" IN 23, 42, 51 (optional 49) WHILE USING PLATA WITH DUET!!!!
 
-current_pl = '73'
+current_pl = '136'
 
 def plata(cur_pl, fi):
     print("fi=", fi)
@@ -19,13 +19,14 @@ def plata(cur_pl, fi):
     # print(co)
     # print()
     # print(nu)
-    url = 'http://192.168.0.' + cur_pl
-    urllas = 'http://192.168.14.56'
+    # etot nomer NADO PROVERYAT!!!!
+    url = 'http://192.168.11.' + cur_pl
+    urllas = 'http://192.168.11.136'
     s = r.get(url)
     # move=url+'/rr_gcode?gcode=G1'
     urlg = url + '/rr_gcode?gcode='
     urlglas = urllas + '/rr_gcode?gcode='
-    iic = urlglas + 'M260A8B'
+    iic = urlg + 'M260A8B'
     if (co == 's'):
         co = '83'
         par = 1
@@ -36,7 +37,7 @@ def plata(cur_pl, fi):
         co = '75'
         par = 1
     if (co == 'l'):
-        co = 'q6'
+        co = '76'
         par = 1
     if (co=='h'):
         co='72'
@@ -67,7 +68,7 @@ def plata(cur_pl, fi):
 @app.route('/index')
 def index():
     user = {'nickname': 'Artyom'}
-    return render_template("rentgen_new1.html",
+    return render_template("chat4.html",
         #title = 'Home',
         user = user)
 #app.run(debug=True)
@@ -77,7 +78,8 @@ def feedback():
     user_feedback = request.form.get('feedback')
 #    print(user_feedback)
     global current_pl
-    if((user_feedback == '213') or (user_feedback == '205') or (user_feedback == '104')):
+    # v SLEDUYUSHEY STROCHKE HOTYA BI ODNO IZ CHISEL DOILOZHNO BIT' POSLYEDNIM NOMEROM RABOCHEY PLATI!!!!
+    if((user_feedback == '56') or (user_feedback == '89') or (user_feedback == '71')):
         current_pl = user_feedback
         print("plata ip changed to")
         print(current_pl)
